@@ -58,18 +58,9 @@ def extract_text_from_file(file_path):
     return ""
 
 
-
-
-
 def garbage_collector(file_path):
         os.remove(file_path)
         
-    
-        
-
-
-
-
 if __name__ == "__main__":
     
     playlist_url = "https://www.youtube.com/playlist?list=PLhTjy8cBISEoYoJd-zR8EV0NqDddAjK3m"
