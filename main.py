@@ -6,8 +6,8 @@ from get_yt_vedio import download_video
 def call_script():
     try:
         
-        subprocess.call(["python", "get_link.py"])
-        subprocess.call(["python", "get_duration.py"])
+        subprocess.call(["python", "get_link_from_playlist.py"])
+        subprocess.call(["python", "get_titles.py"])
         
     except subprocess.CalledProcessError as e:
         print(f"Subprocess error: {e}")
@@ -63,11 +63,11 @@ def garbage_collector(file_path):
         
 if __name__ == "__main__":
     
-    playlist_url = "https://www.youtube.com/playlist?list=PLhTjy8cBISEoYoJd-zR8EV0NqDddAjK3m"
+    playlist_url = "https://www.youtube.com/playlist?list=PLzBN4RaCn7AykvE-7GIT9ZK2wT0BpbPvh"
     playlist_url_file_path = "playlist_url.txt"
     save_url_to_file(playlist_url, playlist_url_file_path)
 
-    # call_script()
+    call_script()
 
     playlist_name_path = "playlist_name.txt"
     playlist_name_data = extract_text_from_file(playlist_name_path)
